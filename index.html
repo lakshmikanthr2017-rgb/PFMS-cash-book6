@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANARA BANK PFMS CASH LEDGER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>CANARA BANK PFMS CASH LEDGER</h2>
+        <h3>SCHOOL NAME: GLPS BANDREHALLI THANDYA</h3>
+
+        <!-- ನಮೂದಿಸುವ ಫಾರ್ಮ್ -->
+        <div class="card">
+            <h4>ಆಟೋಮ್ಯಾಟಿಕ್ ಕ್ಯಾಶ್ ಲೆಡ್ಜರ್ ಲೆಕ್ಕಾಚಾರ (Cash Calculator)</h4>
+            <form id="ledgerForm">
+                <div class="form-grid">
+                    <div>
+                        <label>ದಿನಾಂಕ (Date):</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div>
+                        <label>ವಿವರ (Particulars):</label>
+                        <input type="text" id="particulars" placeholder="ಉದಾ: ಜಮಾ / ಖರ್ಚು" required>
+                    </div>
+                    <div>
+                        <label>School Grant (₹):</label>
+                        <input type="number" class="grant-input" id="schoolGrant" value="0">
+                    </div>
+                    <div>
+                        <label>PTA Meeting (₹):</label>
+                        <input type="number" class="grant-input" id="ptaMeeting" value="0">
+                    </div>
+                    <div>
+                        <label>Eco Club Grant (₹):</label>
+                        <input type="number" class="grant-input" id="ecoClub" value="0">
+                    </div>
+                    <div>
+                        <label>LBA Grant (₹):</label>
+                        <input type="number" class="grant-input" id="lbaGrant" value="0">
+                    </div>
+                    <div>
+                        <label>UDISE+ Grant (₹):</label>
+                        <input type="number" class="grant-input" id="udiseGrant" value="0">
+                    </div>
+                    <div>
+                        <label>SDMC Training (₹):</label>
+                        <input type="number" class="grant-input" id="sdmcTraining" value="0">
+                    </div>
+                    <div>
+                        <label>Library Grant (₹):</label>
+                        <input type="number" class="grant-input" id="libraryGrant" value="0">
+                    </div>
+                    <div>
+                        <label>TLM Grant (₹):</label>
+                        <input type="number" class="grant-input" id="tlmGrant" value="0">
+                    </div>
+                </div>
+                <button type="button" onclick="addRow()">ಲೆಡ್ಜರ್‌ಗೆ ಸೇರಿಸಿ (Add Record)</button>
+            </form>
+        </div>
+
+        <!-- ಲೆಡ್ಜರ್ ಟೇಬಲ್ -->
+        <div class="table-responsive">
+            <table id="cashLedgerTable">
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>ವಿವರಗಳು</th>
+                        <th>SCHOOL GRANT</th>
+                        <th>PTA MEETING</th>
+                        <th>ECO CLUB</th>
+                        <th>LBA GRANT</th>
+                        <th>UDISE+</th>
+                        <th>SDMC TRG</th>
+                        <th>LIBRARY</th>
+                        <th>TLM GRANT</th>
+                        <th>TOTAL (₹)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Default Excel Data -->
+                    <tr>
+                        <td>2025-12-01</td>
+                        <td>ಪ್ರಾ ಶಿಲ್ಕು</td>
+                        <td>5000</td>
+                        <td>1500</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><strong>6500</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2025-12-01</td>
+                        <td>ಖರ್ಚು</td>
+                        <td>5000</td>
+                        <td>1500</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><strong>6500</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
